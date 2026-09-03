@@ -1,0 +1,4 @@
+.env
+.vite/
+.vscode/
+node_modules/

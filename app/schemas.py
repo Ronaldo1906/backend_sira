@@ -10,10 +10,11 @@ class UsuarioBase(BaseModel):
     email: EmailStr
 
 class UsuarioCreate(UsuarioBase):
-    pass
+    contrasena: str  # Útil al momento de registrar un usuario
 
 class UsuarioResponse(UsuarioBase):
     id_usuario: int
+    contrasena: str  # <--- AGREGAR AQUÍ para que FastAPI la incluya en la respuesta
     fecha_registro: datetime
 
     class Config:
